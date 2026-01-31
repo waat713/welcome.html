@@ -1,1 +1,31 @@
-# welcome.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chao mung</title>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+crossorigin="anonymous">
+</head>
+<body>
+<h1>Chao mung tien hanh khao sat</h1>
+<p>hhhhhhhhhhh.</p>
+<p>Before you go to the survey, you need to wait 1 minute so please use this time to read the introductory text</p>
+<button id="exit">Tien hanh khao sat!</button>
+<script>
+$(document).ready(function() {
+  $("#exit").prop("disabled", true);
+  setTimeout(function(){
+    $("#exit").prop("disabled", false);
+    $("#exit").click(function() {
+      var pageArr = ["https://forms.gle/SRyWnSxBcMAeyPec6", "https://forms.gle/tK4xKNvLNS2wLpXM7", "https://forms.gle/b18FzZEvY7HXE1Sw5"];
+      document.location.href = pageArr[Math.floor(Math.random() * pageArr.length)];
+    });
+  }, 30000);
+});
+</script>
+</body>
+</html># welcome.html
